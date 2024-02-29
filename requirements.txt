@@ -1,0 +1,7 @@
+langchain
+sentence_transformers
+torch
+pypdf
+openai
+python-dotenv
+qdrant_client
