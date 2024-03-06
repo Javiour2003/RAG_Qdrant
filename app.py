@@ -6,8 +6,6 @@ import openai
 import os
 from dotenv import load_dotenv
 
-# from upload import url, qdrant, embeddings
-
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -50,7 +48,7 @@ def rag(db,query):
     response = openai.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": f"""You are an helpful assistant who is does exactly what it
+                    {"role": "system", "content": f"""You are an helpful assistant who does exactly what it
                       is asked to do."""},
                     {"role": "user", "content": prompt}
                 ]
